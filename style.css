@@ -1,3 +1,17 @@
+#mainTitle {
+    font-size: 3em;
+    text-align: center;
+}
+
+.basePolice {
+    font-size: 2em;
+    text-align: center;
+}
+
+.round-broder {
+    border-radius: 10px;
+}
+
 p {
-    color: red;
+    text-align: center;
 }
