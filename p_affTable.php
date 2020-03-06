@@ -19,15 +19,20 @@ function invokeStructureFin(){
     echo "        </div>\n    </body>\n</html>";
 }
 
-function invokeDebList(){
-    echo "            <a>
-                <ul class=\"center\">";
+function invokeDebList($i){
+    if ($i%2 == 0){
+        echo "            <a>
+                <ul class=\"center pair\">";
+    }
+    else {
+        echo "            <a>
+                <ul class=\"center impair\">";
+    }
 }
 
 function invokeFinList(){
     echo "                </ul>
-            </a>
-";
+            </a>";
 }
 
 function invokeLi($tC, $el){
@@ -84,13 +89,15 @@ invokeStructureDeb($nomTable);
 echo "\n        <div class=\"results round-broder\">\n";
 
 $ctnCol = recupData($conn, $nomTable);
+$conteur = 0;
 
 foreach ($ctnCol as $ctn) {
-    invokeDebList();
+    invokeDebList($conteur);
     for($i=0; $i<count($ctn); $i++){
         invokeLi($tailleCol, $ctn[$i]);
     }
     invokeFinList();
+    $conteur += 1;
 }
 
 invokeStructureFin();
