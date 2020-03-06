@@ -42,7 +42,7 @@ p {
 div.results a ul {
     width: 100%;
     padding: 0px;
-    margin: 0px;
+    margin: 20px 0px 0px;
 }
 
 div.results a ul li {
@@ -55,6 +55,7 @@ div.results a ul li {
 a.button {
     padding: 10px;
     border-radius: 10px;
+    margin: auto auto 50px;
 }
 
 a.return {
