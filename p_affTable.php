@@ -21,27 +21,28 @@ function invokeStructureDeb($nT){
 }
 
 function invokeStructureFin(){
-    echo "        </div>\n    </body>\n</html>";
+    echo "\n            </div>\n        </div>\n    </body>\n</html>";
 }
 
-function invokeDebList($i){
+function invokeDebList($i, $tN){
     if ($i%2 == 0){
-        echo "            <a>
-                <ul class=\"center pair\">";
+        echo "\n                <a href=\"p_modifSuppr.php?tN=$tN&id=$i\">
+                    <ul class=\"center pair\">\n";
     }
     else {
-        echo "            <a>
-                <ul class=\"center impair\">";
+        echo "\n                <a href=\"p_modifSuppr.php?tN=$tN&id=$i\">
+                    <ul class=\"center impair\">\n";
     }
 }
 
 function invokeFinList(){
-    echo "                </ul>
-            </a>";
+    echo "                    </ul>
+                </a>";
 }
 
 function invokeLi($tC, $el){
-    echo "                    <li class=\"basePolice\" style=\"width:$tC%;\">$el</li>\n";
+//    echo "                        <li class=\"basePolice\" style=\"width:$tC%;\">$el</li>\n";
+    echo "<li class=\"basePolice\" style=\"width:$tC%;\">$el</li>";
 }
 
 function dbCon() {
@@ -91,14 +92,14 @@ $tailleCol = detTailleCol($conn, $nomTable);
 
 
 invokeStructureDeb($nomTable);
-echo "\n        <div class=\"results round-broder\">\n";
+echo "\n\n            <div class=\"results round-broder\">";
 
 $ctnCol = recupData($conn, $nomTable);
 $conteur = 0;
 
 foreach ($ctnCol as $ctn) {
-    invokeDebList($conteur);
-    for($i=0; $i<count($ctn); $i++){
+    invokeDebList($conteur, $nomTable);
+    for($i=0; $i<count($ctn)/2; $i++){
         invokeLi($tailleCol, $ctn[$i]);
     }
     invokeFinList();
