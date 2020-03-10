@@ -62,6 +62,16 @@ function printForm(){
     return $res;
 }
 
+function recupID(){
+    $c = dbCon();
+    $tN = $_GET['tN'];
+    $id = $_GET['id'];
+    $nC = recupNomCol($c, $tN);
+    $d = recupData($c, $tN)[$id];
+
+    return $d[$nC[0]];
+}
+
 
 
 
@@ -69,6 +79,7 @@ function printForm(){
 
 
 $form = printForm();
+$leId = recupID();
 
 echo "<!DOCTYPE html>
 <html lang=\"fr\">
@@ -90,7 +101,7 @@ echo "<!DOCTYPE html>
 
             </form>
             
-            <a class=\"basePolice button\"href='action_supprimer.php?tN=$tN&id=$id' style=\"background-color: #CCCCCC;\">Supprimer l'élement</a>
+            <a class=\"basePolice button\"href='action_supprimer.php?tN=$tN&id=$leId' style=\"background-color: #CCCCCC;\">Supprimer l'élement</a>
         </div>
     </body>
 </html>";
