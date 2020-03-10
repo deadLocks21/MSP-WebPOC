@@ -72,10 +72,10 @@ echo "<!DOCTYPE html>
             <h1 id=\"mainTitle\">Ajouter un élement à la table $tN</h1>
             
             <br />
-            <form action=\"action_ajouter.php\" method=\"post\">
+            <form action=\"action_ajouter.php?tN=$tN\" method=\"post\">
             
                 $form
-            
+                
             </form>
         </div>
     </body>
