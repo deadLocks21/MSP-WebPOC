@@ -6,7 +6,7 @@ function invokeStructureDeb($nT){
 <html lang=\"fr\">
     <head>
         <meta charset=\"UTF-8\">
-        <title>Contenue $nT</title>
+        <title>Contenu $nT</title>
         <link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">
     </head>
 
