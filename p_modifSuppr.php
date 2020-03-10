@@ -95,7 +95,7 @@ echo "<!DOCTYPE html>
             <h1 id=\"mainTitle\">Modifier un élement de la table $tN</h1>
 
             <br />
-            <form action=\"action_modifier.php\" method=\"post\">
+            <form action=\"action_modifier.php?tN=$tN\" method=\"post\">
             
                 $form
 
