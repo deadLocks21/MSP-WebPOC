@@ -13,7 +13,7 @@ function invokeStructureDeb($nT){
     <body>
         <a href='index.php' class=\"return\">Retour</a>
         <div class=\"center\">
-            <h1 id=\"mainTitle\">Contenue de la table $nT</h1>
+            <h1 id=\"mainTitle\">Contenu de la table $nT</h1>
             <br />
             <a class=\"basePolice button\" href=\"p_ajouter.php?nT=$nT\" style='background-color: #CCCCCC;'>Ajouter une entrée</a>
             <br />";

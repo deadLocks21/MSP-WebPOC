@@ -12,7 +12,7 @@
 
         <form action="action_afficherTable.php" method="post">
             <p><input class="basePolice round-broder" style="width:800px" type="text" name="nom" /></p>
-            <p><input class="round-broder basePolice" style="width:550px" type="submit" value="Voir le contenue de la table"></p>
+            <p><input class="round-broder basePolice" style="width:550px" type="submit" value="Voir le contenu de la table"></p>
         </form>
     </body>
 </html>
